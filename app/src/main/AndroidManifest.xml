@@ -20,10 +20,11 @@
         <service
             android:label="@string/service_name"
             android:name="org.cgutman.usbip.service.UsbIpService"
-            android:foregroundServiceType="specialUse"
+
             android:exported="false">
             <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="Allows continued access to USB devices via USB/IP while in the background" />
         </service>
+<!--        android:foregroundServiceType="specialUse"-->
         
         <activity
             android:name="org.cgutman.usbip.config.UsbIpConfig"

@@ -140,12 +140,12 @@ public class UsbIpService extends Service implements UsbRequestHandler {
 
 		usbPermissionIntent = PendingIntent.getBroadcast(this, 0, i, intentFlags);
 		IntentFilter filter = new IntentFilter(ACTION_USB_PERMISSION);
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+		/*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
 			registerReceiver(usbReceiver, filter, RECEIVER_NOT_EXPORTED);
 		}
-		else {
+		else {*/
 			registerReceiver(usbReceiver, filter);
-		}
+//		}
 		
 		PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
 		WifiManager wm = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
