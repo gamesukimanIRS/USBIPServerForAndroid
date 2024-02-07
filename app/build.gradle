@@ -22,6 +22,10 @@ android {
             path "src/main/jni/Android.mk"
         }
     }
+
+    lint {
+        baseline = file("lint-baseline.xml")
+    }
 }
 
 dependencies {
