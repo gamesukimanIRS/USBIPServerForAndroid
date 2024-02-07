@@ -74,13 +74,13 @@ public class UsbIpConfig extends ComponentActivity {
 					stopService(new Intent(UsbIpConfig.this, UsbIpService.class));
 				}
 				else {
-//					if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-						if (ContextCompat.checkSelfPermission(UsbIpConfig.this, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED) {
-							startService(new Intent(UsbIpConfig.this, UsbIpService.class));
+					startService(new Intent(UsbIpConfig.this, UsbIpService.class));
+					/*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+						if (ContextCompat.checkSelfPermission(UsbIpConfig.this, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED){
 						} else {
 							requestPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS);
 						}
-//					}
+					}*/
 				}
 				
 				running = !running;
